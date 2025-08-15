@@ -26,9 +26,9 @@ class TipUITests {
         val billAmountLabel = context.getString(R.string.bill_amount)
         val tipPercentageLabel = context.getString(R.string.tip_percentage)
 
-        val tipFormatString = context.getString(R.string.tip_amount)
+        val tipLabel = context.getString(R.string.tip_amount)
         val expectedTip = NumberFormat.getCurrencyInstance().format(2 )
-        val expectedTipLabelText = String.format(tipFormatString, expectedTip)
+        val expectedTipLabelText = String.format(tipLabel, expectedTip)
 
         composeTestRule.onNodeWithText(billAmountLabel).performTextInput("10")
         composeTestRule.onNodeWithText(tipPercentageLabel).performTextInput("20")
